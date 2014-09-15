@@ -9,7 +9,9 @@ import (
 	"log"
 	"net/http"
 	"path"
+	"os"
 )
+
 
 func generateCluster() string {
 	b := make([]byte, 16)
@@ -61,5 +63,5 @@ func NewTokenHandler(w http.ResponseWriter, r *http.Request) {
 
 	log.Println("New cluster created", token)
 
-	fmt.Fprintf(w, "https://discovery.etcd.io/"+token)
+	fmt.Fprintf(w, os.Getenv("DISCOVERY_URL") + "/" + token)
 }
