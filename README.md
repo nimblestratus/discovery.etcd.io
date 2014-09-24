@@ -38,3 +38,5 @@ commandline parameter.
 
 Make sure that the url maps to the physical address on which etcd is
 listening; I wasn't able to get it to work otherwise.
+
+Additionally, the server expects etcd to be listening at 127.0.0.1:4001.
