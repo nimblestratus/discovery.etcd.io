@@ -31,5 +31,10 @@ commandline parameter.
 -- or -- 
 
     Usage of ./discovery:
-      -addr="": web service address
+      -addr="": web service address (port, as in :80)
       -url="https://discovery.etcd.io": url prefix for discovery, defaults to https://discovery.etcd.io
+
+## Note
+
+Make sure that the url maps to the physical address on which etcd is
+listening; I wasn't able to get it to work otherwise.
